@@ -63,13 +63,16 @@ console.log(tot3);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function epify(stringa) {
-  if (stringa === "epicode") {
+  const parole = stringa.split(" ");
+
+  console.log(parole);
+  if (parole[0].toUpperCase() === "EPICODE") {
     return stringa;
   } else {
-    return "epicode " + stringa;
+    return "EPICODE " + stringa;
   }
 }
-const testo = epify("epicode");
+const testo = epify(" è una scuola professionale");
 console.log(testo);
 
 /* ESERCIZIO 6
@@ -77,28 +80,26 @@ console.log(testo);
  di 3 o di 7parola. (Suggerimento: usa l'operatore modulo)
 */
 function check3and7(n) {
-  if (n > 0 && n % 3 === 0 && n % 7 === 0) {
-    return "è positivo e multiplo di 3 o 7";
+  if (n >= 0 && (n % 3 === 0 || n % 7 === 0)) {
+    return true;
   } else {
-    return "non multiplo";
+    return false;
   }
 }
-const multiplo = check3and7(1);
-console.log(multiplo);
+console.log(check3and7(0));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
-function reverseString(testo) {
-  const diviso = testo.split("");
-  const invertito = testo.reverseString("");
-  const unione = testo.join("");
-  return unione;
+function reverseString(str) {
+  let diviso = str.split("");
+  let contrario = diviso.reverse();
+  let finale = contrario.join("");
+  return finale;
 }
-unione = reverseString("epicode");
-console.log(unione);
+console.log(reverseString("direstraits"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -113,11 +114,12 @@ console.log(unione);
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
-function cutString(stringa1) {
-  const divisa3 = stringa1.split(" ");
+function cutString(testo) {
+  const modificato = str.slice(1, testo.length - 1);
 
-  return divisa3;
+  return modificato;
 }
+console.log(cutString("markknopfler"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
